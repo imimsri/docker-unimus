@@ -2,17 +2,6 @@ version: "3"
 
 services:
 
-  unimus-db:
-    image: mariadb
-    container_name: unimus-db
-    environment:
-      - MYSQL_ROOT_PASSWORD=supersecret
-      - MYSQL_DATABASE=unimus
-      - MYSQL_USER=unimus
-      - MYSQL_PASSWORD=secret
-    volumes:
-      - ./db:/var/lib/mysql
-      
   unimus:
     image: croc/unimus
     container_name: unimus
