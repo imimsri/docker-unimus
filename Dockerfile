@@ -1,5 +1,5 @@
 FROM ubuntu:xenial
-
+RUN ln -fs /usr/share/zoneinfo/Europe/Madrid /etc/localtime && dpkg-reconfigure -f noninteractive tzdata
 RUN apt-get update && apt-get install -y curl vim less wget
 
 #
